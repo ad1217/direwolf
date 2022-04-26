@@ -250,7 +250,10 @@ struct audio_s {
 
 					/* This same field is also used for CM108 GPIO PTT which will */
 					/* have a name like /dev/hidraw1. */
-			
+
+					/* This field is also used for GPIOD for which it can be a
+                    /* path, name, number, or label */
+
 	        ptt_line_t ptt_line;	/* Control line when using serial port. PTT_LINE_RTS, PTT_LINE_DTR. */
 	        ptt_line_t ptt_line2;	/* Optional second one:  PTT_LINE_NONE when not used. */
 
@@ -267,7 +270,6 @@ struct audio_s {
 					/* the case for CubieBoard where it was longer. */
 					/* This is filled in by ptt_init so we don't have to */
 					/* recalculate it each time we access it. */
-					/* Also GPIO chip name for GPIOD method. Looks like 'gpiochip4' */
 
 					/* This could probably be collapsed into ptt_device instead of being separate. */
 

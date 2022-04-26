@@ -1756,8 +1756,8 @@ void config_init (char *fname, struct audio_s *p_audio_config,
 	        dw_printf ("Config file line %d: Missing GPIO chip for %s.\n", line, otname);
 	        continue;
 	      }
-	      strlcpy(p_audio_config->achan[channel].octrl[ot].out_gpio_name, t, 
-	              sizeof(p_audio_config->achan[channel].octrl[ot].out_gpio_name));
+	      strlcpy(p_audio_config->achan[channel].octrl[ot].ptt_device, t,
+	              sizeof(p_audio_config->achan[channel].octrl[ot].ptt_device));
 
 	      t = split(NULL,0);
 	      if (t == NULL) {
